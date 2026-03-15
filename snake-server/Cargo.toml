@@ -1,0 +1,10 @@
+[package]
+name = "snake-server"
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.71.1"
+
+[dependencies]
+temper-core = { path = "../temper-core", version = "=0.6.0" }
+snake = { path = "../snake", version = "0.0.1" }
+temper-std = { path = "../std", version = "0.6.0", features = ["ws", "io"] }

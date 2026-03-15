@@ -11,9 +11,15 @@ pub (crate) fn init() -> temper_core::Result<()> {
             Ok(())
     }).clone()
 }
-pub fn sleep(ms__2: i32) -> temper_core::Promise<()> {
+pub fn sleep(ms__4: i32) -> temper_core::Promise<()> {
     return panic!();
 }
 pub fn read_line() -> temper_core::Promise<Option<std::sync::Arc<String>>> {
+    return panic!();
+}
+pub fn terminal_columns() -> i32 {
+    return panic!();
+}
+pub fn terminal_rows() -> i32 {
     return panic!();
 }
