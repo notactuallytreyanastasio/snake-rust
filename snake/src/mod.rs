@@ -787,7 +787,7 @@ pub fn render(game__147: SnakeGame) -> std::sync::Arc<String> {
         temper_core::string::builder::append( & sb__149, "#");
         x__150 = x__150.wrapping_add(1);
     }
-    temper_core::string::builder::append( & sb__149, "#\x0a");
+    temper_core::string::builder::append( & sb__149, "#\x0d\x0a");
     let mut y__151: i32 = 0;
     'loop___967: loop {
         t___789 = game__147.height();
@@ -805,7 +805,7 @@ pub fn render(game__147: SnakeGame) -> std::sync::Arc<String> {
             temper_core::string::builder::append( & sb__149, cellChar__43(game__147.clone(), p__153.clone()));
             x__152 = x__152.wrapping_add(1);
         }
-        temper_core::string::builder::append( & sb__149, "#\x0a");
+        temper_core::string::builder::append( & sb__149, "#\x0d\x0a");
         y__151 = y__151.wrapping_add(1);
     }
     temper_core::string::builder::append( & sb__149, "#");
@@ -818,7 +818,7 @@ pub fn render(game__147: SnakeGame) -> std::sync::Arc<String> {
         temper_core::string::builder::append( & sb__149, "#");
         x__154 = x__154.wrapping_add(1);
     }
-    temper_core::string::builder::append( & sb__149, "#\x0a");
+    temper_core::string::builder::append( & sb__149, "#\x0d\x0a");
     let statusText__155: std::sync::Arc<String>;
     let mut t___800: GameStatus = game__147.status();
     if temper_core::is::<Playing>(t___800.clone()) {
@@ -830,6 +830,6 @@ pub fn render(game__147: SnakeGame) -> std::sync::Arc<String> {
             statusText__155 = std::sync::Arc::new("".to_string());
         }
     }
-    temper_core::string::builder::append( & sb__149, std::sync::Arc::new(format!("Score: {}  {}\x0a", game__147.score(), statusText__155.clone())));
+    temper_core::string::builder::append( & sb__149, std::sync::Arc::new(format!("Score: {}  {}\x0d\x0a", game__147.score(), statusText__155.clone())));
     return temper_core::string::builder::to_string( & sb__149);
 }
