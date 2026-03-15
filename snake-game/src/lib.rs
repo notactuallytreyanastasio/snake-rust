@@ -7,6 +7,7 @@ pub (crate) use support::*;
 pub fn init(config: Option<temper_core::Config>) -> temper_core::Result<temper_core::AsyncRunner> {
     crate::CONFIG.get_or_init(| | config.unwrap_or_else(| | temper_core::Config::default()));
     snake::init(Some(crate::config().clone())) ? ;
+    temper_std::init(Some(crate::config().clone())) ? ;
     r#mod::init() ? ;
     Ok(crate::config().runner().clone())
 }
